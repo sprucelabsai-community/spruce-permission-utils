@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/sprucelabsai/spruce-permission-utils/compare/v0.2.0...v1.0.0) (2022-12-19)
+
+
+### Breaking Changes
+
+* removed impl export (gotta slow down) ([568e4fa](https://github.com/sprucelabsai/spruce-permission-utils/commit/568e4fa))
+
+
+### Features
+
+* AuthorizerImpl exported ([8bd0244](https://github.com/sprucelabsai/spruce-permission-utils/commit/8bd0244))
+
 # [0.2.0](https://github.com/sprucelabsai/spruce-permission-utils/compare/v0.1.0...v0.2.0) (2022-12-19)
 
 
