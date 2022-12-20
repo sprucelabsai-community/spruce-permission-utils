@@ -6,8 +6,8 @@ import AbstractSpruceTest, {
 	assert,
 	errorAssert,
 } from '@sprucelabs/test-utils'
-import AuthorizerImpl from '../../authorizer/AuthorizerImpl'
 import AuthorizerFactory from '../../authorizer/AuthorizerFactory'
+import AuthorizerImpl from '../../authorizer/AuthorizerImpl'
 
 export default class AuthorizerFactoryTest extends AbstractSpruceTest {
 	protected static async beforeEach(): Promise<void> {
