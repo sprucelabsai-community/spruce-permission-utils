@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.0.5...v1.1.0) (2022-12-20)
+
+
+### Features
+
+* authorizerimpl exported for extension ([34c9ed9](https://github.com/sprucelabsai/spruce-permission-utils/commit/34c9ed9))
+
 ## [1.0.5](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.0.4...v1.0.5) (2022-12-20)
 
 ## [1.0.4](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.0.3...v1.0.4) (2022-12-20)
