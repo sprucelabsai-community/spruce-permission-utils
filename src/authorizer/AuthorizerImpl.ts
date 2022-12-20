@@ -12,7 +12,7 @@ import { assertOptions } from '@sprucelabs/schema'
 import SpruceError from '../errors/SpruceError'
 
 export default class AuthorizerImpl implements Authorizer {
-	private connectToApi: MercuryConnectFactory
+	protected connectToApi: MercuryConnectFactory
 
 	public constructor(connectToApi: MercuryConnectFactory) {
 		this.connectToApi = connectToApi
