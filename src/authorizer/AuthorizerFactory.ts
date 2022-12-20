@@ -1,7 +1,7 @@
 import { Authorizer } from '@sprucelabs/heartwood-view-controllers'
 import { MercuryConnectFactory } from '@sprucelabs/mercury-client'
 import { assertOptions } from '@sprucelabs/schema'
-import AuthorizerImpl from './Authorizer'
+import AuthorizerImpl from './AuthorizerImpl'
 
 export default class AuthorizerFactory {
 	private static Class: AuthorizerContructor = AuthorizerImpl

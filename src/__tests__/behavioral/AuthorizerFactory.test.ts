@@ -6,7 +6,7 @@ import AbstractSpruceTest, {
 	assert,
 	errorAssert,
 } from '@sprucelabs/test-utils'
-import AuthorizerImpl from '../../authorizer/Authorizer'
+import AuthorizerImpl from '../../authorizer/AuthorizerImpl'
 import AuthorizerFactory from '../../authorizer/AuthorizerFactory'
 
 export default class AuthorizerFactoryTest extends AbstractSpruceTest {
