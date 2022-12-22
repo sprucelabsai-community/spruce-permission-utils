@@ -8,7 +8,7 @@ export default class SpruceError extends BaseSpruceError<ErrorOptions> {
 		let message
 		switch (options?.code) {
 			case 'PERMISSION_NOT_FOUND':
-				message = 'A Permission not found just happened!'
+				message = `I could not find a permission with the id '${options.code}'.`
 				break
 			default:
 				message = super.friendlyMessage()
