@@ -77,10 +77,10 @@
   "dependencies": {
     "@sprucelabs/error": "^5.0.570",
     "@sprucelabs/heartwood-view-controllers": "^99.2.30",
-    "@sprucelabs/mercury-client": "^35.0.113",
-    "@sprucelabs/mercury-types": "^38.0.82",
+    "@sprucelabs/mercury-client": "^35.0.114",
+    "@sprucelabs/mercury-types": "^38.0.83",
     "@sprucelabs/schema": "^28.5.112",
-    "@sprucelabs/spruce-core-schemas": "^35.1.145",
+    "@sprucelabs/spruce-core-schemas": "^35.1.146",
     "@sprucelabs/spruce-skill-utils": "^28.1.62"
   },
   "jest": {
