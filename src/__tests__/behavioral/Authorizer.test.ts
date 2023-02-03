@@ -1,0 +1,145 @@
+import { Authorizer } from '@sprucelabs/heartwood-view-controllers'
+import { MercuryClient, MercuryClientFactory } from '@sprucelabs/mercury-client'
+import {
+	coreEventContracts,
+	SpruceSchemas,
+} from '@sprucelabs/mercury-core-events'
+import { PermissionContractId, PermissionId } from '@sprucelabs/mercury-types'
+import AbstractSpruceTest, {
+	test,
+	generateId,
+	assert,
+} from '@sprucelabs/test-utils'
+import AuthorizerFactory from '../../authorizer/AuthorizerFactory'
+
+export default class AuthorizerTest extends AbstractSpruceTest {
+	private static readonly connectToApi = () => MercuryClientFactory.Client()
+	private static auth: Authorizer
+	private static client: MercuryClient
+	private static lastTargetAndPayload:
+		| SavePermissionsTargetAndPayload
+		| undefined
+	private static personId: string
+	private static contractId: PermissionContractId
+	private static organizationId: string | undefined
+	private static locationId: string | undefined
+	private static skillId: string | undefined
+	private static payload: {
+		id: PermissionId<any>
+		can: SpruceSchemas.Mercury.v2020_12_25.StatusFlags
+	}[]
+
+	protected static async beforeEach(): Promise<void> {
+		await super.beforeEach()
+
+		MercuryClientFactory.reset()
+		MercuryClientFactory.setIsTestMode(true)
+		MercuryClientFactory.setDefaultContract(coreEventContracts[0])
+		AuthorizerFactory.setConnectToApi(this.connectToApi)
+
+		this.auth = AuthorizerFactory.getInstance()
+		this.client = await this.connectToApi()
+		this.contractId = 'events-contract'
+		this.organizationId = undefined
+		this.lastTargetAndPayload = undefined
+		this.locationId = undefined
+		this.skillId = undefined
+		this.payload = [
+			{
+				id: generateId(),
+				can: {
+					default: true,
+				},
+			},
+		]
+
+		await this.handleSaveEvent()
+
+		this.personId = generateId()
+	}
+
+	@test('can save for person 1', 'events-contract')
+	@test('can save for person 2', 'feed-contract')
+	protected static async canSaveForPerson(contractId: PermissionContractId) {
+		this.contractId = contractId
+		await this.assertSavingMatchesTarget()
+	}
+
+	@test()
+	protected static async savesWithOrganizationId() {
+		this.organizationId = generateId()
+		await this.assertSavingMatchesTarget()
+	}
+
+	@test()
+	protected static async savesWithLocationId() {
+		this.locationId = generateId()
+		await this.assertSavingMatchesTarget()
+	}
+
+	@test()
+	protected static async savesWithSkillId() {
+		this.skillId = generateId()
+		await this.assertSavingMatchesTarget()
+	}
+
+	@test()
+	protected static async savesActualPermissions() {
+		this.payload = [
+			{
+				id: 'can-do-a-thing',
+				can: {
+					default: true,
+					offPrem: true,
+				},
+			},
+			{
+				id: 'can-do-another-thing',
+				can: {
+					default: false,
+				},
+			},
+		]
+		await this.assertSavingMatchesTarget()
+	}
+
+	private static async assertSavingMatchesTarget() {
+		await this.auth.savePermissions({
+			contractId: this.contractId,
+			permissions: this.payload as any,
+			target: {
+				personId: this.personId,
+				organizationId: this.organizationId,
+				locationId: this.locationId,
+				skillId: this.skillId,
+			},
+		})
+
+		assert.isEqualDeep(this.lastTargetAndPayload?.target, {
+			permissionPersonId: this.personId,
+			organizationId: this.organizationId,
+			permissionContractId: this.contractId,
+			locationId: this.locationId,
+			permissionSkillId: this.skillId,
+		})
+
+		assert.isEqualDeep(this.lastTargetAndPayload?.payload, {
+			permissions: this.payload,
+		})
+	}
+
+	private static async handleSaveEvent() {
+		await this.client.on(
+			'save-permissions::v2020_12_25',
+			(targetAndPayload) => {
+				this.lastTargetAndPayload = targetAndPayload
+				return {
+					success: true,
+				}
+			}
+		)
+	}
+}
+
+type SavePermissionsTargetAndPayload =
+	SpruceSchemas.Mercury.v2020_12_25.SavePermissionsEmitTargetAndPayload

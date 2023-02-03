@@ -1,6 +1,7 @@
 import {
 	Authorizer,
 	AuthorizerCanOptions,
+	SavePermissionsOptions,
 } from '@sprucelabs/heartwood-view-controllers'
 import { MercuryConnectFactory } from '@sprucelabs/mercury-client'
 import {
@@ -16,6 +17,27 @@ export default class AuthorizerImpl implements Authorizer {
 
 	public constructor(connectToApi: MercuryConnectFactory) {
 		this.connectToApi = connectToApi
+	}
+
+	public async savePermissions<
+		ContractId extends PermissionContractId,
+		Ids extends PermissionId<ContractId>
+	>(options: SavePermissionsOptions<ContractId, Ids>) {
+		const { target, contractId, permissions } = options
+		const { personId, organizationId, skillId, locationId } = target
+		const client = await this.connectToApi()
+		await client.emit('save-permissions::v2020_12_25', {
+			target: {
+				permissionContractId: contractId,
+				permissionSkillId: skillId,
+				permissionPersonId: personId,
+				organizationId,
+				locationId,
+			},
+			payload: {
+				permissions,
+			},
+		})
 	}
 
 	public async can<Id extends PermissionContractId>(

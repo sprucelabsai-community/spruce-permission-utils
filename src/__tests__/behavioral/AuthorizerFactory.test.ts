@@ -73,4 +73,6 @@ class StubAuthorizer implements Authorizer {
 	>(): Promise<Record<Ids, boolean>> {
 		return {} as any
 	}
+
+	public async savePermissions(): Promise<void> {}
 }
