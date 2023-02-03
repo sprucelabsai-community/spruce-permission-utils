@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.1.128...v1.2.0) (2023-02-03)
+
+
+### Features
+
+* can save permissions!! ([de44f64](https://github.com/sprucelabsai/spruce-permission-utils/commit/de44f64))
+
 ## [1.1.128](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.1.127...v1.1.128) (2023-01-29)
 
 ## [1.1.127](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.1.126...v1.1.127) (2023-01-29)
