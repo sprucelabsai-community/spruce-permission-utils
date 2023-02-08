@@ -103,17 +103,21 @@ export default class AuthorizerTest extends AbstractSpruceTest {
 		await this.assertSavingMatchesTarget()
 	}
 
-	private static async assertSavingMatchesTarget() {
-		await this.auth.savePermissions({
-			contractId: this.contractId,
-			permissions: this.payload as any,
-			target: {
-				personId: this.personId,
-				organizationId: this.organizationId,
-				locationId: this.locationId,
-				skillId: this.skillId,
-			},
+	@test()
+	protected static async throwsIfEmitThrows() {
+		const client = await this.connectToApi()
+		await client.on('save-permissions::v2020_12_25', () => {
+			assert.fail('should fail')
+			return {
+				success: true,
+			}
 		})
+
+		await assert.doesThrowAsync(() => this.savePermissions())
+	}
+
+	private static async assertSavingMatchesTarget() {
+		await this.savePermissions()
 
 		assert.isEqualDeep(this.lastTargetAndPayload?.target, {
 			permissionPersonId: this.personId,
@@ -125,6 +129,19 @@ export default class AuthorizerTest extends AbstractSpruceTest {
 
 		assert.isEqualDeep(this.lastTargetAndPayload?.payload, {
 			permissions: this.payload,
+		})
+	}
+
+	private static async savePermissions() {
+		await this.auth.savePermissions({
+			contractId: this.contractId,
+			permissions: this.payload as any,
+			target: {
+				personId: this.personId,
+				organizationId: this.organizationId,
+				locationId: this.locationId,
+				skillId: this.skillId,
+			},
 		})
 	}
 

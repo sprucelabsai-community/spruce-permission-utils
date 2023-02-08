@@ -26,7 +26,7 @@ export default class AuthorizerImpl implements Authorizer {
 		const { target, contractId, permissions } = options
 		const { personId, organizationId, skillId, locationId } = target
 		const client = await this.connectToApi()
-		await client.emit('save-permissions::v2020_12_25', {
+		await client.emitAndFlattenResponses('save-permissions::v2020_12_25', {
 			target: {
 				permissionContractId: contractId,
 				permissionSkillId: skillId,
