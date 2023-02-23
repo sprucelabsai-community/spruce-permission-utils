@@ -1,3 +1,10 @@
+# [2.0.0](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.2.45...v2.0.0) (2023-02-23)
+
+
+### Breaking Changes
+
+* **auto-upgrade:** upgraded packages [upgrade-all] ([e366cdd](https://github.com/sprucelabsai/spruce-permission-utils/commit/e366cdd))
+
 ## [1.2.45](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.2.44...v1.2.45) (2023-02-22)
 
 ## [1.2.44](https://github.com/sprucelabsai/spruce-permission-utils/compare/v1.2.43...v1.2.44) (2023-02-22)
