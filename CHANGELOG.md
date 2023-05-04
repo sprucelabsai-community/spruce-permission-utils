@@ -1,3 +1,10 @@
+# [5.0.0](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v4.0.68...v5.0.0) (2023-05-04)
+
+
+### Breaking Changes
+
+* **auto-upgrade:** upgraded packages [upgrade-all] ([63f04f7](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/63f04f7))
+
 ## [4.0.68](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v4.0.67...v4.0.68) (2023-05-03)
 
 ## [4.0.67](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v4.0.66...v4.0.67) (2023-05-03)
