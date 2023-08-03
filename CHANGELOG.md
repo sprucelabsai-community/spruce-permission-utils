@@ -1,3 +1,5 @@
+## [7.0.18](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v7.0.17...v7.0.18) (2023-08-03)
+
 ## [7.0.17](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v7.0.16...v7.0.17) (2023-07-29)
 
 ## [7.0.16](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v7.0.15...v7.0.16) (2023-07-29)
