@@ -21,7 +21,7 @@ export default class AuthorizerImpl implements Authorizer {
 
 	public async savePermissions<
 		ContractId extends PermissionContractId,
-		Ids extends PermissionId<ContractId>
+		Ids extends PermissionId<ContractId>,
 	>(options: SavePermissionsOptions<ContractId, Ids>) {
 		const { target, contractId, permissions } = options
 		const { personId, organizationId, skillId, locationId } = target

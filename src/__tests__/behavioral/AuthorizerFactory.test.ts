@@ -69,7 +69,7 @@ export default class AuthorizerFactoryTest extends AbstractSpruceTest {
 class StubAuthorizer implements Authorizer {
 	public async can<
 		ContractId extends PermissionContractId,
-		Ids extends PermissionId<ContractId>
+		Ids extends PermissionId<ContractId>,
 	>(): Promise<Record<Ids, boolean>> {
 		return {} as any
 	}
