@@ -78,9 +78,9 @@
     "@sprucelabs/error": "^5.1.38",
     "@sprucelabs/heartwood-view-controllers": "^107.2.85",
     "@sprucelabs/mercury-client": "^41.0.118",
-    "@sprucelabs/mercury-types": "^46.0.105",
+    "@sprucelabs/mercury-types": "^46.0.106",
     "@sprucelabs/schema": "^29.0.75",
-    "@sprucelabs/spruce-core-schemas": "^39.0.111",
+    "@sprucelabs/spruce-core-schemas": "^39.0.112",
     "@sprucelabs/spruce-skill-utils": "^30.1.9"
   },
   "jest": {
