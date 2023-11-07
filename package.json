@@ -76,12 +76,12 @@
   },
   "dependencies": {
     "@sprucelabs/error": "^5.1.41",
-    "@sprucelabs/heartwood-view-controllers": "^107.2.94",
-    "@sprucelabs/mercury-client": "^41.0.125",
+    "@sprucelabs/heartwood-view-controllers": "^107.2.96",
+    "@sprucelabs/mercury-client": "^41.0.126",
     "@sprucelabs/mercury-types": "^46.0.111",
     "@sprucelabs/schema": "^29.0.80",
     "@sprucelabs/spruce-core-schemas": "^39.0.117",
-    "@sprucelabs/spruce-skill-utils": "^30.1.14"
+    "@sprucelabs/spruce-skill-utils": "^30.1.15"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
