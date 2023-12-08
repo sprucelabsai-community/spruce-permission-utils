@@ -78,10 +78,10 @@
     "@sprucelabs/error": "^5.1.52",
     "@sprucelabs/heartwood-view-controllers": "^108.25.13",
     "@sprucelabs/mercury-client": "^41.0.168",
-    "@sprucelabs/mercury-types": "^46.0.145",
+    "@sprucelabs/mercury-types": "^46.0.146",
     "@sprucelabs/schema": "^29.2.4",
-    "@sprucelabs/spruce-core-schemas": "^39.0.152",
-    "@sprucelabs/spruce-skill-utils": "^30.1.42"
+    "@sprucelabs/spruce-core-schemas": "^39.0.153",
+    "@sprucelabs/spruce-skill-utils": "^30.1.43"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
