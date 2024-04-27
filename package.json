@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@sprucelabs/error": "^6.0.13",
-    "@sprucelabs/heartwood-view-controllers": "^110.0.14",
+    "@sprucelabs/heartwood-view-controllers": "^110.0.15",
     "@sprucelabs/mercury-client": "^42.0.20",
     "@sprucelabs/mercury-types": "^47.0.15",
     "@sprucelabs/schema": "^30.0.20",
