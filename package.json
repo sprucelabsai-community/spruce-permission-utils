@@ -56,7 +56,7 @@
   },
   "devDependencies": {
     "@sprucelabs/esm-postbuild": "^6.0.20",
-    "@sprucelabs/jest-json-reporter": "^8.0.24",
+    "@sprucelabs/jest-json-reporter": "^8.0.25",
     "@sprucelabs/resolve-path-aliases": "^2.0.21",
     "@sprucelabs/semantic-release": "^5.0.1",
     "@sprucelabs/test": "^9.0.13",
@@ -74,12 +74,12 @@
   },
   "dependencies": {
     "@sprucelabs/error": "^6.0.23",
-    "@sprucelabs/heartwood-view-controllers": "^110.2.9",
-    "@sprucelabs/mercury-client": "^42.0.47",
-    "@sprucelabs/mercury-types": "^47.0.35",
-    "@sprucelabs/schema": "^30.0.36",
-    "@sprucelabs/spruce-core-schemas": "^40.0.30",
-    "@sprucelabs/spruce-skill-utils": "^31.0.39"
+    "@sprucelabs/heartwood-view-controllers": "^110.2.10",
+    "@sprucelabs/mercury-client": "^42.0.48",
+    "@sprucelabs/mercury-types": "^47.0.36",
+    "@sprucelabs/schema": "^30.0.37",
+    "@sprucelabs/spruce-core-schemas": "^40.0.31",
+    "@sprucelabs/spruce-skill-utils": "^31.0.40"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
