@@ -55,12 +55,12 @@
     "watch.tsc": "tsc -w"
   },
   "devDependencies": {
-    "@sprucelabs/esm-postbuild": "^6.0.271",
-    "@sprucelabs/jest-json-reporter": "^8.0.290",
-    "@sprucelabs/resolve-path-aliases": "^2.0.266",
+    "@sprucelabs/esm-postbuild": "^6.0.272",
+    "@sprucelabs/jest-json-reporter": "^8.0.291",
+    "@sprucelabs/resolve-path-aliases": "^2.0.267",
     "@sprucelabs/semantic-release": "^5.0.2",
     "@sprucelabs/test": "^9.0.42",
-    "@sprucelabs/test-utils": "^5.1.231",
+    "@sprucelabs/test-utils": "^5.1.232",
     "@types/node": "^22.5.2",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.9.1",
@@ -73,13 +73,13 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@sprucelabs/error": "^6.0.287",
-    "@sprucelabs/heartwood-view-controllers": "^110.11.78",
-    "@sprucelabs/mercury-client": "^42.0.371",
-    "@sprucelabs/mercury-types": "^47.0.338",
-    "@sprucelabs/schema": "^30.0.340",
-    "@sprucelabs/spruce-core-schemas": "^40.1.280",
-    "@sprucelabs/spruce-skill-utils": "^31.0.354"
+    "@sprucelabs/error": "^6.0.288",
+    "@sprucelabs/heartwood-view-controllers": "^110.11.80",
+    "@sprucelabs/mercury-client": "^42.0.372",
+    "@sprucelabs/mercury-types": "^47.0.339",
+    "@sprucelabs/schema": "^30.0.341",
+    "@sprucelabs/spruce-core-schemas": "^40.1.281",
+    "@sprucelabs/spruce-skill-utils": "^31.0.355"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
