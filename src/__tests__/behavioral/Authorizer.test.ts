@@ -116,6 +116,69 @@ export default class AuthorizerTest extends AbstractSpruceTest {
         await assert.doesThrowAsync(() => this.savePermissions())
     }
 
+    @test()
+    protected static async doesHonorEmitsExpectedEvent() {
+        const contractId = generateId() as PermissionContractId
+        const locationId = generateId()
+        const organizationId = generateId()
+
+        let passedPayload:
+            | DoesHonorPermissionContractTargetAndPayload['payload']
+            | undefined
+        let passedTarget:
+            | DoesHonorPermissionContractTargetAndPayload['target']
+            | undefined
+
+        const client = await this.connectToApi()
+        await client.on(
+            'does-honor-permission-contract::v2020_12_25',
+            ({ payload, target }) => {
+                passedPayload = payload
+                passedTarget = target
+                return {
+                    doesHonor: true,
+                }
+            }
+        )
+
+        await this.auth.doesHonorPermissionContract({
+            contractId,
+            target: {
+                locationId,
+                organizationId,
+            },
+        })
+
+        assert.isEqualDeep(passedPayload, {
+            id: contractId,
+        })
+
+        assert.isEqualDeep(passedTarget, {
+            locationId,
+            organizationId,
+        })
+    }
+
+    @test('does honor returns true', true)
+    @test('does honor returns false', false)
+    protected static async doesHonorReturnsResponseFromEvent(
+        expected: boolean
+    ) {
+        const client = await this.connectToApi()
+        await client.on('does-honor-permission-contract::v2020_12_25', () => {
+            return {
+                doesHonor: expected,
+            }
+        })
+
+        const doesHonor = await this.auth.doesHonorPermissionContract({
+            contractId: 'authorizer-contract',
+            target: {},
+        })
+
+        assert.isEqual(doesHonor, expected, 'Response did not match')
+    }
+
     private static async assertSavingMatchesTarget() {
         await this.savePermissions()
 
@@ -160,3 +223,6 @@ export default class AuthorizerTest extends AbstractSpruceTest {
 
 type SavePermissionsTargetAndPayload =
     SpruceSchemas.Mercury.v2020_12_25.SavePermissionsEmitTargetAndPayload
+
+type DoesHonorPermissionContractTargetAndPayload =
+    SpruceSchemas.Mercury.v2020_12_25.DoesHonorPermissionContractEmitTargetAndPayload

@@ -1,4 +1,7 @@
-import { Authorizer } from '@sprucelabs/heartwood-view-controllers'
+import {
+    Authorizer,
+    AuthorizerDoesHonorOptions,
+} from '@sprucelabs/heartwood-view-controllers'
 import { MercuryClientFactory } from '@sprucelabs/mercury-client'
 import { PermissionContractId, PermissionId } from '@sprucelabs/mercury-types'
 import AbstractSpruceTest, {
@@ -67,6 +70,11 @@ export default class AuthorizerFactoryTest extends AbstractSpruceTest {
 }
 
 class StubAuthorizer implements Authorizer {
+    public async doesHonorPermissionContract<
+        ContractId extends PermissionContractId,
+    >(_options: AuthorizerDoesHonorOptions<ContractId>): Promise<boolean> {
+        return true
+    }
     public async can<
         ContractId extends PermissionContractId,
         Ids extends PermissionId<ContractId>,

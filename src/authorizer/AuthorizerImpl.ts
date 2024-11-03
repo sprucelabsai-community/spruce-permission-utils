@@ -1,6 +1,7 @@
 import {
     Authorizer,
     AuthorizerCanOptions,
+    AuthorizerDoesHonorOptions,
     SavePermissionsOptions,
 } from '@sprucelabs/heartwood-view-controllers'
 import { MercuryConnectFactory } from '@sprucelabs/mercury-client'
@@ -26,6 +27,7 @@ export default class AuthorizerImpl implements Authorizer {
         const { target, contractId, permissions } = options
         const { personId, organizationId, skillId, locationId } = target
         const client = await this.connectToApi()
+
         await client.emitAndFlattenResponses('save-permissions::v2020_12_25', {
             target: {
                 permissionContractId: contractId,
@@ -71,6 +73,25 @@ export default class AuthorizerImpl implements Authorizer {
         })
 
         return results
+    }
+
+    public async doesHonorPermissionContract<
+        ContractId extends PermissionContractId,
+    >(options: AuthorizerDoesHonorOptions<ContractId>): Promise<boolean> {
+        const { contractId, target } = options
+
+        const client = await this.connectToApi()
+        const [{ doesHonor }] = await client.emitAndFlattenResponses(
+            'does-honor-permission-contract::v2020_12_25',
+            {
+                target,
+                payload: {
+                    id: contractId,
+                },
+            }
+        )
+
+        return doesHonor
     }
 }
 
