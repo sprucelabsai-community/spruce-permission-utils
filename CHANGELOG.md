@@ -1,3 +1,10 @@
+# [9.0.0](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v8.1.108...v9.0.0) (2025-01-06)
+
+
+### Breaking Changes
+
+* upgrade ([97763d5](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/97763d5))
+
 ## [8.1.108](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v8.1.107...v8.1.108) (2025-01-06)
 
 ## [8.1.107](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v8.1.106...v8.1.107) (2025-01-02)
