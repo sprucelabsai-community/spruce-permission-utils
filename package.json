@@ -60,7 +60,7 @@
     "@sprucelabs/resolve-path-aliases": "^2.0.524",
     "@sprucelabs/semantic-release": "^5.0.2",
     "@sprucelabs/test": "^9.0.65",
-    "@sprucelabs/test-utils": "^5.1.533",
+    "@sprucelabs/test-utils": "^5.1.534",
     "@types/node": "^22.10.5",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.17.0",
@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@sprucelabs/error": "^6.0.558",
-    "@sprucelabs/heartwood-view-controllers": "^113.1.1",
+    "@sprucelabs/heartwood-view-controllers": "^114.0.0",
     "@sprucelabs/mercury-client": "^42.0.667",
     "@sprucelabs/mercury-types": "^47.0.647",
     "@sprucelabs/schema": "^31.0.7",
