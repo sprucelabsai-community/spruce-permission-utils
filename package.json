@@ -70,11 +70,11 @@
     "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
     "tsc-watch": "^6.2.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@sprucelabs/error": "^6.0.559",
-    "@sprucelabs/heartwood-view-controllers": "^115.0.0",
+    "@sprucelabs/heartwood-view-controllers": "^115.0.1",
     "@sprucelabs/mercury-client": "^42.0.670",
     "@sprucelabs/mercury-types": "^47.0.649",
     "@sprucelabs/schema": "^31.0.9",
