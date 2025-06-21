@@ -52,15 +52,15 @@
     "update.dependencies": "yarn run clean.dependencies && yarn",
     "watch.build.dev": "tsc-watch --sourceMap --onCompilationComplete 'yarn run post.watch.build'",
     "watch.rebuild": "yarn run clean.all && yarn install && yarn run watch.build.dev",
-    "watch.tsc": "tsc -w"
+    "watch.tsc": "tsc -w",
+    "build": "yarn run build.tsc --sourceMap ; yarn run resolve-paths"
   },
   "devDependencies": {
-    "@sprucelabs/esm-postbuild": "^7.0.6",
-    "@sprucelabs/jest-json-reporter": "^9.0.11",
-    "@sprucelabs/resolve-path-aliases": "^3.0.6",
+    "@sprucelabs/esm-postbuild": "^7.0.7",
+    "@sprucelabs/jest-json-reporter": "^9.0.12",
     "@sprucelabs/semantic-release": "^5.0.2",
-    "@sprucelabs/test": "^10.0.4",
-    "@sprucelabs/test-utils": "^6.0.15",
+    "@sprucelabs/test": "^10.0.5",
+    "@sprucelabs/test-utils": "^6.0.16",
     "@types/node": "^24.0.3",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.29.0",
@@ -73,13 +73,14 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@sprucelabs/error": "^7.0.10",
+    "@sprucelabs/error": "^7.0.11",
     "@sprucelabs/heartwood-view-controllers": "^121.2.25",
-    "@sprucelabs/mercury-client": "^43.0.21",
-    "@sprucelabs/mercury-types": "^48.0.17",
-    "@sprucelabs/schema": "^32.0.16",
-    "@sprucelabs/spruce-core-schemas": "^41.0.16",
-    "@sprucelabs/spruce-skill-utils": "^32.0.16"
+    "@sprucelabs/mercury-client": "^43.0.22",
+    "@sprucelabs/mercury-types": "^48.0.18",
+    "@sprucelabs/resolve-path-aliases": "^3.0.7",
+    "@sprucelabs/schema": "^32.0.17",
+    "@sprucelabs/spruce-core-schemas": "^41.0.17",
+    "@sprucelabs/spruce-skill-utils": "^32.0.17"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
