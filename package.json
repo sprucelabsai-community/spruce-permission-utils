@@ -61,7 +61,7 @@
     "@sprucelabs/semantic-release": "^5.0.2",
     "@sprucelabs/test": "^10.0.11",
     "@sprucelabs/test-utils": "^6.0.38",
-    "@types/node": "^24.0.14",
+    "@types/node": "^24.0.15",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.31.0",
     "eslint-config-spruce": "^11.2.26",
@@ -76,7 +76,7 @@
     "@sprucelabs/error": "^7.0.25",
     "@sprucelabs/heartwood-view-controllers": "^123.2.2",
     "@sprucelabs/mercury-client": "^43.0.54",
-    "@sprucelabs/mercury-types": "^48.0.41",
+    "@sprucelabs/mercury-types": "^48.0.42",
     "@sprucelabs/schema": "^32.0.41",
     "@sprucelabs/spruce-core-schemas": "^41.0.40",
     "@sprucelabs/spruce-skill-utils": "^32.0.42"
