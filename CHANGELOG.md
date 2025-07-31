@@ -1,3 +1,10 @@
+# [18.0.0](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v17.0.11...v18.0.0) (2025-07-31)
+
+
+### Breaking Changes
+
+* upgrade ([58bded7](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/58bded7))
+
 ## [17.0.11](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v17.0.10...v17.0.11) (2025-07-31)
 
 ## [17.0.10](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v17.0.9...v17.0.10) (2025-07-30)
