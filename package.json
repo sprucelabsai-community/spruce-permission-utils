@@ -1,6 +1,6 @@
 {
   "name": "@sprucelabs/spruce-permission-utils",
-  "version": "19.0.45",
+  "version": "19.0.46",
   "description": "Support for permission related work in Sprucebot",
   "publishConfig": {
     "access": "public"
