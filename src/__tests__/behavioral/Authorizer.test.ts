@@ -28,6 +28,7 @@ export default class AuthorizerTest extends AbstractSpruceTest {
         id: PermissionId<any>
         can: SpruceSchemas.Mercury.v2020_12_25.StatusFlags
     }[]
+    private static roleId: string | undefined
 
     protected static async beforeEach(): Promise<void> {
         await super.beforeEach()
@@ -44,6 +45,7 @@ export default class AuthorizerTest extends AbstractSpruceTest {
         this.lastTargetAndPayload = undefined
         this.locationId = undefined
         this.skillId = undefined
+        this.roleId = undefined
         this.payload = [
             {
                 id: generateId(),
@@ -80,6 +82,12 @@ export default class AuthorizerTest extends AbstractSpruceTest {
     @test()
     protected static async savesWithSkillId() {
         this.skillId = generateId()
+        await this.assertSavingMatchesTarget()
+    }
+
+    @test()
+    protected static async savesWithRoleId() {
+        this.roleId = generateId()
         await this.assertSavingMatchesTarget()
     }
 
@@ -188,6 +196,7 @@ export default class AuthorizerTest extends AbstractSpruceTest {
             permissionContractId: this.contractId,
             locationId: this.locationId,
             permissionSkillId: this.skillId,
+            roleId: this.roleId,
         })
 
         assert.isEqualDeep(this.lastTargetAndPayload?.payload, {
@@ -204,6 +213,7 @@ export default class AuthorizerTest extends AbstractSpruceTest {
                 organizationId: this.organizationId,
                 locationId: this.locationId,
                 skillId: this.skillId,
+                roleId: this.roleId,
             },
         })
     }

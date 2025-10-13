@@ -25,7 +25,7 @@ export default class AuthorizerImpl implements Authorizer {
         Ids extends PermissionId<ContractId>,
     >(options: SavePermissionsOptions<ContractId, Ids>) {
         const { target, contractId, permissions } = options
-        const { personId, organizationId, skillId, locationId } = target
+        const { personId, organizationId, skillId, locationId, roleId } = target
         const client = await this.connectToApi()
 
         await client.emitAndFlattenResponses('save-permissions::v2020_12_25', {
@@ -35,6 +35,7 @@ export default class AuthorizerImpl implements Authorizer {
                 permissionPersonId: personId,
                 organizationId,
                 locationId,
+                roleId,
             },
             payload: {
                 permissions,
