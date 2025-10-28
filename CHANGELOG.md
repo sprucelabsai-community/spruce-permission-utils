@@ -1,3 +1,5 @@
+## [19.0.134](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v19.0.133...v19.0.134) (2025-10-28)
+
 ## [19.0.133](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v19.0.132...v19.0.133) (2025-10-28)
 
 ## [19.0.132](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v19.0.131...v19.0.132) (2025-10-26)
