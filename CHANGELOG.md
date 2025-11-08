@@ -1,3 +1,8 @@
+## <small>19.0.138 (2025-11-08)</small>
+
+* Automated CI/CD permissions update ([c2ac079](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/c2ac079))
+* chore(auto-upgrade): upgraded packages [upgrade-all] ([c64302e](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/c64302e))
+
 ## [19.0.137](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v19.0.136...v19.0.137) (2025-10-31)
 
 ## [19.0.136](https://github.com/sprucelabsai-community/spruce-permission-utils/compare/v19.0.135...v19.0.136) (2025-10-31)
