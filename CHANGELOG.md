@@ -1,3 +1,8 @@
+## <small>19.0.139 (2025-11-08)</small>
+
+* chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([802131c](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/802131c))
+* chore(auto-upgrade): upgraded packages [upgrade-all] ([badeadf](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/badeadf))
+
 ## <small>19.0.138 (2025-11-08)</small>
 
 * Automated CI/CD permissions update ([c2ac079](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/c2ac079))
