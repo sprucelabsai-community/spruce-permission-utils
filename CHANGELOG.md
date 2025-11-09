@@ -1,3 +1,7 @@
+## 20.0.0 (2025-11-09)
+
+* major: upgrade ([58a088e](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/58a088e))
+
 ## <small>19.0.139 (2025-11-08)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([802131c](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/802131c))
