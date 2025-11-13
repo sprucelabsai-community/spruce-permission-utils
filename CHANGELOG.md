@@ -1,3 +1,8 @@
+## <small>20.0.10 (2025-11-13)</small>
+
+* chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([edbddae](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/edbddae))
+* chore(auto-upgrade): upgraded packages [upgrade-all] ([0193fe6](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/0193fe6))
+
 ## <small>20.0.9 (2025-11-13)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([d53836a](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/d53836a))
