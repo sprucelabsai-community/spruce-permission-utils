@@ -1,3 +1,7 @@
+## 21.0.0 (2025-11-14)
+
+* major: view-controller major upgrade (DependencyLoader) ([96ff396](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/96ff396))
+
 ## <small>20.0.10 (2025-11-13)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([edbddae](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/edbddae))
