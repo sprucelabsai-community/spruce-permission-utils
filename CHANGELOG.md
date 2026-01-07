@@ -1,3 +1,7 @@
+## 21.1.0 (2026-01-07)
+
+* feat: add exports field for proper ESM support in Node.js ([73a21f9](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/73a21f9))
+
 ## <small>21.0.28 (2026-01-07)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([fae1ca1](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/fae1ca1))
