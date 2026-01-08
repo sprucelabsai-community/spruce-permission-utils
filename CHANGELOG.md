@@ -1,3 +1,7 @@
+## 22.0.0 (2026-01-08)
+
+* major: upgrade dependencies ([3367381](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/3367381))
+
 ## <small>21.1.1 (2026-01-07)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([65483cf](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/65483cf))
