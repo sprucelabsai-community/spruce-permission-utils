@@ -1,3 +1,7 @@
+## <small>22.0.6 (2026-02-18)</small>
+
+* patch: upgrade dependencies ([fb18ca7](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/fb18ca7))
+
 ## <small>22.0.5 (2026-02-17)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([274ce0c](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/274ce0c))
