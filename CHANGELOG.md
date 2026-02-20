@@ -1,3 +1,8 @@
+## <small>22.0.11 (2026-02-20)</small>
+
+* chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([2355f38](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/2355f38))
+* chore(auto-upgrade): upgraded packages [upgrade-all] ([f21e768](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/f21e768))
+
 ## <small>22.0.10 (2026-02-18)</small>
 
 * chore(auto-upgrade): Upgrade Tests Passed [auto-merge] ([95054d8](https://github.com/sprucelabsai-community/spruce-permission-utils/commit/95054d8))
