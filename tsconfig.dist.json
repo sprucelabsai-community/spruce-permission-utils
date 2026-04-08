@@ -18,7 +18,9 @@
         "resolveJsonModule": true,
         "sourceMap": false,
         "outDir": "./build",
+        "rootDir": "./src",
         "baseUrl": "src",
+        "types": ["node"],
         "experimentalDecorators": true,
 		"paths": {
 			"#spruce/*": [".spruce/*"]
